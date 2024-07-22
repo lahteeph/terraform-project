@@ -17,19 +17,15 @@
  - AWS Secret Access Key [None]: YOUR_SECRET_ACCESS_KEY
  - Default region name [None]: us-west-2
  - Default output format [None]: json
-
----------access key pics
-
-
-
+   
+![access key](https://github.com/user-attachments/assets/ff1e65d1-f321-4bd6-8ad4-5f07cc885cbb)
 
 # Lets explain step by step the line code with before separating them into root modules for better understanding with respect to the objectives.
 ## Create a VPC:
   - Name: KCVPC
   - IPv4 CIDR block: 10.0.0.0/16
 
---------vpc code pics 
-
+![vpc code](https://github.com/user-attachments/assets/4b26ac55-b8be-49c3-a959-ffc37bf5a5c2)
 
 ## create Subnets:
   - Public Subnet:
@@ -37,19 +33,19 @@
     IPv4 CIDR block: 10.0.1.0/24
     Availability Zone: Select any one from your region
     
-public code pics
+public code pics![publicsubnet code](https://github.com/user-attachments/assets/0bda0651-1780-4869-ba82-aae1345ed611)
     
   - Private Subnet:
     Name: PrivateSubnet
     IPv4 CIDR block: 10.0.2.0/24
     Availability Zone: Select any one from your region (preferably the same as the Public Subnet for simplicity)
-
---------------private code pics.
+    
+![private code pics](https://github.com/user-attachments/assets/669e9af2-58e5-4579-b632-2b0585c42b74)
 
 ## Configure an Internet Gateway (IGW):
   - Create and attach an IGW to KCVPC.
 
---------------internet gateway pics 
+![internet gateway](https://github.com/user-attachments/assets/486b11b4-c11d-4099-a460-731090ce1fc4)
 
 ## Configure Route Tables:
   - Public Route Table:
@@ -57,14 +53,15 @@ public code pics
     Associate PublicSubnet with this route table.
     Add a route to the IGW (0.0.0.0/0 -> IGW).
 
-------route table and association pics
+![route table and association pics](https://github.com/user-attachments/assets/29e28322-f3c6-451a-b9b7-672b380c7e03)
 
   - Private Route Table:
     Name: PrivateRouteTable
     Associate PrivateSubnet with this route table.
     Ensure no direct route to the internet.
 
--------- private route table and ass pics
+![private route table and ass pics ](https://github.com/user-attachments/assets/a067f53c-f7a9-4aca-abfa-1478cb162d92)
+
 
 ## Set Up Security Groups:
   - Create a Security Group for public instances (e.g., web servers):
@@ -72,45 +69,53 @@ public code pics
   - Allow inbound SSH (port 22) traffic from a specific IP (e.g., your local IP). (https://www.whatismyip.com/)
   - Allow all outbound traffic.
 
-    ---------public sg pics
+![public sg pics ](https://github.com/user-attachments/assets/681bc4ea-1071-409b-9521-e3c3054c9969)
 
   - Create a Security Group for private instances (e.g., database servers):
   - Allow inbound traffic from the PublicSubnet on required ports (e.g., PostgreSQL port).
   - Allow all outbound traffic
 
--------------private sg pics 
+![private sg pics ](https://github.com/user-attachments/assets/2290f829-c6f0-4b62-ae89-4d90b27f938d)
 
 ## Network ACLs:
 ### Configure NACLs for additional security on both subnets.
   - Public Subnet NACL:
   - Allow inbound HTTP, HTTPS, and SSH traffic.
   - Allow outbound traffic.
+    
+![public Acls pics](https://github.com/user-attachments/assets/149a6b9f-ca3a-465d-be56-384f9506b109)
 
-------------- public Acls pics 
 
   - Private Subnet NACL: Allow inbound traffic from the public subnet. 
   - Allow outbound traffic to the public subnet and internet.
 
--------------- private acls pics 
-------------------acls ass pics 
+![private acls pics ](https://github.com/user-attachments/assets/78c57685-43ed-44e2-b681-8fd4ceb30763)
+
+
+![acls ass pics](https://github.com/user-attachments/assets/be2af91a-0190-436d-a2f9-c8194c0dc2d0)
+
 
 ## Creating keypair
   lets create a pair key locally and include it on the code for authorization and accessibility.
   
-------------keypair pics
-------------ssh key pics 
+  
+![keypair pics](https://github.com/user-attachments/assets/35c578e6-46cc-4b42-834d-4f9424ad8162)
+
+![ssh key pics ](https://github.com/user-attachments/assets/1998eff3-98db-4d55-a11a-6a60377a274c)
+
 
 
 ## public Instance.
   -  Write a script to install Nginx on your EC2 instance in the public subnet on deployment and postgresql client to acess the postresql server
     
--------- public instace pics 
+![public instace pics](https://github.com/user-attachments/assets/7f7ccc32-cfd6-4451-a2f1-3272b041c82d)
+
     
 ## private Instance.
 
   - Write a script to install PostgreSQL on your EC2 instance in the public subnet on deployment
 
----------- private instance pics 
+![private instance pics ](https://github.com/user-attachments/assets/50e31a38-8fb6-4215-93fe-2049ac8e4516)
 
 
 
@@ -120,41 +125,59 @@ public code pics
 
 # Deploying the code 
 
---------------modules pics 
+![modules pics ](https://github.com/user-attachments/assets/ffcb2702-9576-4b97-8189-af518bb6be12)
 
--------------modules initiated
 
--------------terraform validate
+![modules initiated](https://github.com/user-attachments/assets/f2f12410-0523-445e-b47d-30703f1cf21a)
 
-------------terraform apply
+
+![terraform validate and plan](https://github.com/user-attachments/assets/2d2c1cab-d0d6-4aee-90fc-134bb3a07ef1)
+
+
+![terraform apply](https://github.com/user-attachments/assets/a71a734c-b008-49fc-8bac-de878dbdeba4)
+
 
 
 # on your aws account copy the ssh login to ur instances
 
 ## Verify that the public instance can be accessed via the internet and verity if service nginx is installed.
 
------ ssh login
----- ping and verify
+![ssh login](https://github.com/user-attachments/assets/b932e6bb-153e-4a97-8930-b445f809ab68)
+
+![ping and verify](https://github.com/user-attachments/assets/49cb2f4d-e813-4f4c-bbcb-4df3ee38ac53)
+
 
 ## Verify that the instance can access the internet through the NAT Gateway and can communicate with the public instance.
 ### you have to allow all tracfic from public subnet (10.0.1.0/24) before you will be able to ssh or access the internet
 
 
------ private ssh log
-------private pinging and verifying 
+![private-ssh log](https://github.com/user-attachments/assets/35c2c3e2-cf70-4ffa-9238-3ef020a9667e)
+
+![private- ping and verifying ](https://github.com/user-attachments/assets/dd0445ac-0a4b-44c9-a975-c9389ccd4e12)
 
 ## verifying if the postgresql-client from the public instance  and access the progresql-server from the private instance
   - establish a database connection from the public instance into the postresql-server
     
----------------------connect to database 
----------------------connect to database2
+![connect to database](https://github.com/user-attachments/assets/9f4bf4aa-18cb-4eab-b1f9-2d797a5db145)
+
+![connect to database 2](https://github.com/user-attachments/assets/5399543e-9558-41e6-876a-fd821ff1c69f)
+
 
   ![image](https://github.com/user-attachments/assets/12027ec6-cb4f-4ec3-87cd-6333c694cb5b)
 
 # Clean up resource on completion using terraform destroy
 
---------terraform destroy 
---------terraform destroy 2
+![terraform destroy](https://github.com/user-attachments/assets/72e4ad2a-fe23-43ad-8fdf-72cff2519db9)
+![terraform destroy 2](https://github.com/user-attachments/assets/e015b618-04fe-4285-a294-ec7f97d49322)
+
+
+#NOTE: the ssh key was not upload in the repo..
+
+# Resources
+https://registry.terraform.io/providers/hashicorp/aws/latest/docs
+https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/user-data.html
+https://www.youtube.com/watch?v=eEbstFkbl9w&ab_channel=AWSDevelopers
+
 
 
 
