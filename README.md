@@ -8,7 +8,7 @@
 
 # firstly: create an IAM user, generated an Accesskey and apply AministratorAccess to the user
 
--------------------IAM user pics,
+![IAM user](https://github.com/user-attachments/assets/282ed91d-5f6d-4fe3-ba79-a08c95e13474)
 
 ## configure aws configure
 ### aws configuration commands is listed below
