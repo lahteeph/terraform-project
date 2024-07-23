@@ -131,6 +131,8 @@
 ![modules initiated](https://github.com/user-attachments/assets/f2f12410-0523-445e-b47d-30703f1cf21a)
 
 
+# ran terraform validate command to see verify if the codes are valid
+
 ![terraform validate and plan](https://github.com/user-attachments/assets/2d2c1cab-d0d6-4aee-90fc-134bb3a07ef1)
 
 
@@ -147,7 +149,6 @@
 
 ![Screenshot from 2024-07-23 00-57-38](https://github.com/user-attachments/assets/bd4998f9-45ce-41b7-89a1-eb22477881bc)
 
-# ran terraform validate command to see verify if the codes are valid
 
 ![Screenshot from 2024-07-23 00-58-59](https://github.com/user-attachments/assets/0d6846ea-afa9-4c8b-baa1-d6a079929ad3)
 
