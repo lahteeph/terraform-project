@@ -196,7 +196,7 @@
 ![terraform destroy 2](https://github.com/user-attachments/assets/e015b618-04fe-4285-a294-ec7f97d49322)
 
 
-#NOTE: the ssh key was not upload in the repo..
+# NOTE: the ssh key was not upload in this repo..
 
 # Resources
     - https://registry.terraform.io/providers/hashicorp/aws/latest/docs
