@@ -138,7 +138,32 @@ public code pics![publicsubnet code](https://github.com/user-attachments/assets/
 
 
 
-# on your aws account copy the ssh login to ur instances
+# on your aws account verify 
+    - all the modules created 
+    - copy the ssh login to ur instances
+
+![Screenshot from 2024-07-23 00-56-10](https://github.com/user-attachments/assets/7cba3cda-4ff5-4c93-8fb3-fec420cc0637)
+
+
+![Screenshot from 2024-07-23 00-57-38](https://github.com/user-attachments/assets/bd4998f9-45ce-41b7-89a1-eb22477881bc)
+
+![Screenshot from 2024-07-23 00-58-59](https://github.com/user-attachments/assets/0d6846ea-afa9-4c8b-baa1-d6a079929ad3)
+
+![Screenshot from 2024-07-23 00-59-52](https://github.com/user-attachments/assets/d68ad961-2866-4f07-b2da-259571380fd8)
+
+![Screenshot from 2024-07-23 01-01-00](https://github.com/user-attachments/assets/4fe8a3f0-18f7-4417-9a98-4ac4bd389192)
+
+![Screenshot from 2024-07-23 01-02-35](https://github.com/user-attachments/assets/c1299630-e043-4e85-bd7f-616cdbe36978)
+
+![Screenshot from 2024-07-23 01-04-28](https://github.com/user-attachments/assets/7f5b4ed3-a2dc-493e-a451-2b8d6dd0105e)
+
+![Screenshot from 2024-07-23 01-05-09](https://github.com/user-attachments/assets/3db78dbf-1374-49dd-8d68-ba4a04f0c7de)
+
+![Screenshot from 2024-07-23 01-06-49](https://github.com/user-attachments/assets/8f9b0cc6-5a11-4d5d-9190-1127b25f542d)
+
+
+![Screenshot from 2024-07-23 01-07-52](https://github.com/user-attachments/assets/bef890e2-1de5-40ce-8530-9d8fd209f7c8)
+
 
 ## Verify that the public instance can be accessed via the internet and verity if service nginx is installed.
 
