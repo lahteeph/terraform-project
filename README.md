@@ -33,7 +33,7 @@
     IPv4 CIDR block: 10.0.1.0/24
     Availability Zone: Select any one from your region
     
-public code pics![publicsubnet code](https://github.com/user-attachments/assets/0bda0651-1780-4869-ba82-aae1345ed611)
+![publicsubnet code](https://github.com/user-attachments/assets/0bda0651-1780-4869-ba82-aae1345ed611)
     
   - Private Subnet:
     Name: PrivateSubnet
@@ -97,7 +97,7 @@ public code pics![publicsubnet code](https://github.com/user-attachments/assets/
 
 ## Creating keypair
   lets create a pair key locally and include it on the code for authorization and accessibility.
-  
+  same ssh-key will be used for both public and private instances for simplicity.  
   
 ![keypair pics](https://github.com/user-attachments/assets/35c578e6-46cc-4b42-834d-4f9424ad8162)
 
@@ -119,7 +119,7 @@ public code pics![publicsubnet code](https://github.com/user-attachments/assets/
 
 
 
-# Create separate child modules for your resources and reference them in your root module for readability and re-usability of your code.
+# separate child modules for your resources and reference them in your root module for readability and re-usability of your code.
 # Write a script to install Nginx on your EC2 instance in the public subnet on deployment
 # Write a script to install PostgreSQL on your EC2 instance in the public subnet on deployment
 
@@ -138,7 +138,7 @@ public code pics![publicsubnet code](https://github.com/user-attachments/assets/
 
 
 
-# on your aws account verify 
+# On your aws account, verify: 
     - all the modules created 
     - copy the ssh login to ur instances
 
@@ -146,6 +146,8 @@ public code pics![publicsubnet code](https://github.com/user-attachments/assets/
 
 
 ![Screenshot from 2024-07-23 00-57-38](https://github.com/user-attachments/assets/bd4998f9-45ce-41b7-89a1-eb22477881bc)
+
+# ran terraform validate command to see verify if the codes are valid
 
 ![Screenshot from 2024-07-23 00-58-59](https://github.com/user-attachments/assets/0d6846ea-afa9-4c8b-baa1-d6a079929ad3)
 
@@ -165,7 +167,7 @@ public code pics![publicsubnet code](https://github.com/user-attachments/assets/
 ![Screenshot from 2024-07-23 01-07-52](https://github.com/user-attachments/assets/bef890e2-1de5-40ce-8530-9d8fd209f7c8)
 
 
-## Verify that the public instance can be accessed via the internet and verity if service nginx is installed.
+## Verify that the public instance can be accessed via the internet and verify if service nginx is installed.
 
 ![ssh login](https://github.com/user-attachments/assets/b932e6bb-153e-4a97-8930-b445f809ab68)
 
@@ -180,15 +182,13 @@ public code pics![publicsubnet code](https://github.com/user-attachments/assets/
 
 ![private- ping and verifying ](https://github.com/user-attachments/assets/dd0445ac-0a4b-44c9-a975-c9389ccd4e12)
 
-## verifying if the postgresql-client from the public instance  and access the progresql-server from the private instance
+## verifying if the postgresql-client from the public instance can  access the progresql-server from the private instance
   - establish a database connection from the public instance into the postresql-server
     
 ![connect to database](https://github.com/user-attachments/assets/9f4bf4aa-18cb-4eab-b1f9-2d797a5db145)
 
 ![connect to database 2](https://github.com/user-attachments/assets/5399543e-9558-41e6-876a-fd821ff1c69f)
 
-
-  ![image](https://github.com/user-attachments/assets/12027ec6-cb4f-4ec3-87cd-6333c694cb5b)
 
 # Clean up resource on completion using terraform destroy
 
@@ -199,9 +199,11 @@ public code pics![publicsubnet code](https://github.com/user-attachments/assets/
 #NOTE: the ssh key was not upload in the repo..
 
 # Resources
-https://registry.terraform.io/providers/hashicorp/aws/latest/docs
-https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/user-data.html
-https://www.youtube.com/watch?v=eEbstFkbl9w&ab_channel=AWSDevelopers
+    - https://registry.terraform.io/providers/hashicorp/aws/latest/docs
+
+    - https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/user-data.html
+
+    - https://www.youtube.com/watch?v=eEbstFkbl9w&ab_channel=AWSDevelopers
 
 
 
