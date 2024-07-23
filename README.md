@@ -20,7 +20,7 @@
    
 ![access key](https://github.com/user-attachments/assets/ff1e65d1-f321-4bd6-8ad4-5f07cc885cbb)
 
-# Lets explain step by step the line code with before separating them into root modules for better understanding with respect to the objectives.
+# Lets explain step by step the line code before separating them into root modules for better understanding with respect to the objectives.
 ## Create a VPC:
   - Name: KCVPC
   - IPv4 CIDR block: 10.0.0.0/16
