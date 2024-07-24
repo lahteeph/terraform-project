@@ -133,6 +133,8 @@
 
 # ran terraform validate command to see verify if the codes are valid
 
+![Screenshot from 2024-07-24 20-14-59](https://github.com/user-attachments/assets/f75238fd-cb2f-4464-b033-dbd9a80509f1)
+
 ![terraform validate and plan](https://github.com/user-attachments/assets/2d2c1cab-d0d6-4aee-90fc-134bb3a07ef1)
 
 
